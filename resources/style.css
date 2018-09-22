@@ -1,11 +1,6 @@
 /*HTML specs*/
 html {
   font-size: 18px;
-  background-color: white;
-}
-head,
-title {
-  display: none;
 }
 
 body {
@@ -32,12 +27,12 @@ h4 {
 .company .container {
   display: flex;
   align-items: center;
-  padding: 12px 0 12px 0.5em;
+  padding: .66rem 0 .66rem 0.5rem;
 }
 
 .company img {
-  height: 1.5em;
-  padding-right: 15px;
+  height: 1.5rem;
+  padding-right: 1rem;
 }
 
 a:link {
@@ -61,7 +56,7 @@ a:link {
   width: 20rem;
   padding: 2rem 3rem;
   position: relative;
-  top: 9em;
+  top: 9rem;
 }
 
 .headline h1 {
@@ -70,11 +65,33 @@ a:link {
   margin: 0.25rem 0;
 }
 
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+
+.headline {
+  width: 100%;
+  padding: 1rem 2rem;
+  top: 10rem;
+}
+
+.headline h4 {
+  font-size: .77rem;
+}
+
+.headline h1 {
+  font-size: 1rem;
+  }
+}
+
 /*Navigation Bar*/
 
 nav {
   background-color: firebrick;
   color: white;
+  height: 50px;
+  width: 100%;
 }
 
 nav ul {
@@ -84,17 +101,13 @@ nav ul {
   padding: 0.75rem 0;
 }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
 .mobile-nav {
   display: none;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   nav ul {
-    display: none
+    display: none;
   }
 
   .mobile-nav {
@@ -117,8 +130,8 @@ li {
 }
 .product-image {
   border: 4px solid black;
-  padding: 2em 0;
-  height: 9em;
+  padding: 2rem 0;
+  height: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +146,7 @@ li {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 .info {
@@ -144,29 +157,34 @@ li {
   display: block;
   background-color: black;
   color: white;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 
 @media only screen and (max-width: 1024px) {
   .product {
     width: 47%;
   }
+
   .product.glasses {
-    display:none;
+    display: none;
   }
 }
+
 @media only screen and (max-width: 470px) {
   .products,
   .business-info {
     flex-wrap: wrap;
   }
+
   .product {
-    width: 90;
+    width: 90%;
     margin: auto;
   }
+
   .product.watch {
     display: none;
   }
+
   .info {
     width: 90%;
     margin: 0.5rem auto;
@@ -180,6 +198,7 @@ footer {
   padding: 5rem 0;
   margin-top: 4rem;
 }
+
 @media only screen and (max-width: 470px) {
   footer {
     text-align: center;
